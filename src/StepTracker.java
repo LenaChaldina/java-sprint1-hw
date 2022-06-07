@@ -1,8 +1,8 @@
 public class StepTracker {
-   int targetStep;
+    int targetStep;
     MonthData[] monthToData;
 
-    StepTracker(){
+    StepTracker() {
         targetStep = 10000;
         monthToData = new MonthData[12];
         for (int i = 0; i < monthToData.length; i++) {
@@ -19,8 +19,8 @@ public class StepTracker {
             System.out.println("Новое целевое кол-во шагов не может быть отрицательным. Значение не изменилось.");
             return targetStep;
         } else {
-        targetStep = newTargetStep;
-        return targetStep;
+            targetStep = newTargetStep;
+            return targetStep;
         }
     }
 
@@ -35,9 +35,11 @@ public class StepTracker {
     void getMaxSteps(int userMonth) {
         monthToData[userMonth].printMaxSteps();
     }
+
     void getAvgSteps(int userMonth) {
         monthToData[userMonth].printAvgSteps();
     }
+
     void getDistance(int userMonth) {
         monthToData[userMonth].printDistance();
     }
@@ -46,5 +48,7 @@ public class StepTracker {
         monthToData[userMonth].printEnergy();
     }
 
-    void getBestSeries(int userMonth) {monthToData[userMonth].printBestSeries(targetStep);}
+    void getBestSeries(int userMonth) {
+        monthToData[userMonth].printBestSeries(targetStep);
+    }
 }

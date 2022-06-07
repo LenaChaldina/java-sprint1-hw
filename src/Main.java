@@ -25,7 +25,7 @@ public class Main {
                     System.out.println("Вводить отрицательные значения нельзя. Пришлось обулить этот ввод.");
                 }
 
-                stepTracker.saveSteps(userMonth,userDay, userSteps);
+                stepTracker.saveSteps(userMonth, userDay, userSteps);
 
 
             } else if (userInput == 2) {
@@ -42,7 +42,7 @@ public class Main {
             } else if (userInput == 3) {
                 System.out.println("Укажите новое целевое кол-во шагов в день");
                 int newTargetStep = scanner.nextInt();
-                System.out.println("Целевое кол-во шагов: " + stepTracker.changeTargetStep(newTargetStep));
+                System.out.printf("Целевое кол-во шагов: %d\n", stepTracker.changeTargetStep(newTargetStep));
 
 
             } else {

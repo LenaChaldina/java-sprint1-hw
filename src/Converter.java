@@ -1,17 +1,14 @@
 public class Converter {
-    int stepLength;
-    int stepEnergy;
+    static final int STEP_LENGTH = 75;
+    static final int STEP_ENERGY = 50;
 
-    Converter() {
-        stepLength = 75;
-        stepEnergy = 50;
+
+    static int getLength(int countSteps) {
+        return countSteps * STEP_LENGTH / 10000; //в км
     }
 
-   int getLength(int countSteps) {
-       return countSteps * stepLength/10000; //в км
-    }
-    int getEnergy(int countSteps) {
-        return countSteps * stepEnergy/1000; //в ккал
+    static int getEnergy(int countSteps) {
+        return countSteps * STEP_ENERGY / 1000; //в ккал
     }
 
 }
